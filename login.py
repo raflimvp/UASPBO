@@ -1,6 +1,5 @@
 import sys
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QLineEdit
+from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QLineEdit, QStackedWidget
 from PyQt5.QtGui import QIcon
 from PyQt5.uic import loadUi
 import mysql.connector as mc
@@ -85,7 +84,7 @@ class Login(QMainWindow):
 if __name__ == '__main__':
   app = QApplication(sys.argv)
   window = Login()
-  widget = QtWidgets.QStackedWidget()
+  widget = QStackedWidget()
   widget.addWidget(window)
   widget.setMinimumWidth(490)
   widget.setMinimumHeight(250)
